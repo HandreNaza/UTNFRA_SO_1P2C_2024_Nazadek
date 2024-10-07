@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bim/bash
 
-DISCO=$(sudo fdisk -l | grep Disk | grep "10 GiB" | awk '{print $2}' | awk -F ':' '{print $1}')
+
+DISCO=$(sudo fdisk -l |grep Disk |grep "10 GiB" | awk '{print $2}' | awk -F ':' '{print $1}')
 
 echo "Particiono el disco: $DISCO"
-echo
 
 sudo fdisk $DISCO << EOF
 
@@ -49,18 +49,10 @@ n
 l
 
 +1G
-
-
-
 w
 EOF
-
 
 echo
 echo "Mis Particiones: "
 sudo fdisk -l $DISCO
 echo
-
-
-
-
