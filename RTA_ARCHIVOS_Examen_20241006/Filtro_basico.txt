@@ -1,0 +1,20 @@
+MemTotal:        2010892 kB
+model name	: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+Información del chasis:
+# dmidecode 3.3
+Getting SMBIOS data from sysfs.
+SMBIOS 2.5 present.
+
+Handle 0x0003, DMI type 3, 13 bytes
+Chassis Information
+	Manufacturer: Oracle Corporation
+	Type: Other
+	Lock: Not Present
+	Version: Not Specified
+	Serial Number: Not Specified
+	Asset Tag: Not Specified
+	Boot-up State: Safe
+	Power Supply State: Safe
+	Thermal State: Safe
+	Security Status: None
+
