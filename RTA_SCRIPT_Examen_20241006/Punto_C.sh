@@ -11,11 +11,11 @@ sudo useradd -m -s /bin/bash -G p1c2_2024_gAlumno p1c2_2024_A3
 sudo useradd -m -s /bin/bash -G p1c2_2024_gProfesores p1c2_2024_P1
 
 
-echo "Ajusto los Permisos: "
+echo "Ajusto los Permisos:"
 sudo chmod -R 750 /Examenes-UTN/alumno_1
-sudo chmod -R 750 /Examenes-UTN/alumno_2
-sudo chmod -R 750 /Examenes-UTN/alumno_3
-sudo chmod -R 750 /Examenes-UTN/profesores
+sudo chmod -R 760 /Examenes-UTN/alumno_2
+sudo chmod -R 700 /Examenes-UTN/alumno_3
+sudo chmod -R 775 /Examenes-UTN/profesores
 
 
 
@@ -34,13 +34,10 @@ sudo ls -l /Examenes-UTN
 echo
 
 echo "Creo archivo validar"
-sudo -c "whoami > /Examenes-UTN/alumno_1/validar.txt" p1c2_2024_A1
-sudo -c "whoami > /Examenes-UTN/alumno_2/validar.txt" p1c2_2024_A2
-sudo -c "whoami > /Examenes-UTN/alumno_3/validar.txt" p1c2_2024_A3
-sudo -c "whoami > /Examenes-UTN/profesores/validar.txt" p1c2_2024_P1
-
-
-
+sudo -u p1c2_2024_A1 bash -c "whoami > /Examenes-UTN/alumno_1/validar.txt"
+sudo -u p1c2_2024_A2 bash -c "whoami > /Examenes-UTN/alumno_2/validar.txt"
+sudo -u p1c2_2024_A3 bash -c "whoami > /Examenes-UTN/alumno_3/validar.txt"
+sudo -u p1c2_2024_P1 bash -c "whoami > /Examenes-UTN/profesores/validar.txt"
 echo
 
 echo "Muestro permisos del archivo: "
@@ -54,9 +51,9 @@ sudo cat /Examenes-UTN/alumno_1/validar.txt
 sudo cat /Examenes-UTN/alumno_2/validar.txt
 sudo cat /Examenes-UTN/alumno_3/validar.txt
 sudo cat /Examenes-UTN/profesores/validar.txt
-
 echo
 
+exit 0
 
 
 LISTA=$1
@@ -80,4 +77,12 @@ do
   	fi
 done
 IFS=$ANT_IFS
+echo
+
+
+
+
+
+
+
 
