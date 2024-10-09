@@ -1,0 +1,5 @@
+Mi ip publica es: 190.188.84.195
+Mi usuario es: vagrant
+Hash del usuario vagrant:
+vagrant:$y$j9T$f7V.J8o8/5JXqaI3xUKKQ0$oND2iaEkOI22AcHc9kfKwylXqBi.VixFO/cPGuxMD..:19958:0:99999:7:::
+La url de mi repo es: git@github.com:HandreNaza/UTNFRA_SO_1P2C_2024_Nazadek.git
